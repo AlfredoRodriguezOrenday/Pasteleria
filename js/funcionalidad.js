@@ -11,6 +11,7 @@ eventListeners();
 
 function eventListeners(){
     guardar.addEventListener('click', agregarInfo);
+    ColorCuadros();
 }
 
 function agregarInfo(e){
@@ -31,6 +32,7 @@ function agregarInfo(e){
         alert("Debes de escoger por lo menos un sabor de pastel");
         sabores ="";
         adornos ="";
+        descripcion.removeAttribute = "bg-success text-white px-5 font-weight-bold";
     }else{
         let guardar = sabores;
         sabores ="El pastel es de sabor" + sabores;
@@ -38,8 +40,9 @@ function agregarInfo(e){
         adornos = "Los adornos son" + adornos;
         
     }
-    descripcion.classList = "bg-success text-white";
+    descripcion.classList = "bg-success text-white px-5 font-weight-bold";
     descripcion.innerHTML = sabores + ". " + adornos;
     sabores ="";
     adornos ="";
 }
+
