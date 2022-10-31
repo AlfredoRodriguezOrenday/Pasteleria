@@ -90,6 +90,7 @@ function enviarPedidos(e){
             nombre.value = "";
             telefono.value = "";
             correo.value = "";
+            pedido = false;
         }
         else{
             alert('Debe de escoger un tipo de pastel para su pedido');
