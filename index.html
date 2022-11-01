@@ -10,8 +10,35 @@
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <title>Pasteleria</title>
 </head>
-<body>
+<body class="bg-white text-dark">
+    <style>
+        input[type=checkbox]{
+            transform: scale(1.5);
+        }
+        .darks{
+            background-color: black;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" href="#">Bienvenido <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#pasteles">Pasteles</a>
+            <a class="nav-link" href="#adornos">Adornos</a>
+            <a class="nav-link" href="#creacion">Crea tu propio pastel</a>
+            <a class="nav-link" href="#horarios">Horario</a>
+            <a class="nav-link" href="pastelero.html">Pastelero</a>
+            <a class="nav-link disabled" style="padding-left:600px" href=""></a>
+            <button style="border-color:transparent; background:transparent;" id="icono" value="noche"><i class="fa fa-moon-o" id="DN"></i></button>
+          </div>
+        </div>
+      </nav>
     <h1 class="text-center mt-4">Bienvenido</h1><br>
+    
+    
     <h2 class="text-center">Escoge el pastel de tu preferencia.</h2> <br>
 
     <!--Secciones-->    
@@ -22,7 +49,7 @@
         <p class="text-center">¡¡Todos los sabores de pasteles que manejamos!!</p>
 
         <!--Pasteles de sabores-->
-        <div class="container">
+        <div class="container" id="pasteles">
             <div class="row">
                 <div class="col-1"></div>
                 <div class="col-3 card text-center bg-danger text-white m-3">
@@ -46,7 +73,7 @@
                     <h4 class="text-center">Mango/Mango</h4>
                     <p><i class="fa fa-usd" aria-hidden="true"></i>250</p>
                 </div>
-                <div class="col-3 card text-center bg-white text-dark m-3">
+                <div class="col-3 card text-center bg-white m-3 tsc">
                     <img src="./img/leches.png" class="img-fluid mt-3 mb-2 p-3" alt="Sabor 3 Leches">
                     <h4 class="text-center">3 Leches/Milk</h4>
                     <p><i class="fa fa-usd" aria-hidden="true"></i>220</p>
@@ -61,39 +88,39 @@
         <!--Pasteles de sabores-->
 
         <!--Decoraciones-->
-        <h3 class="text-center mt-3">Adornos</h3> <br>
+        <h3 class="text-center mt-3" id="adornos">Adornos</h3> <br>
         <p class="text-center">¡¡Todos los adornos de pasteles que manejamos!!</p> <br>
         <div class="container">
             <div class="row">
                     
                 <div class="col-1"></div>
-                <div class="col-3 card text-center bg-transparent text-dark m-3 border border-warning">
+                <div class="col-3 card text-center bg-transparent m-3 border border-warning">
                     <img src="./img/velas.jpg" class="img-fluid ml-5" alt="Velas" style="height: 200px; width: 150px;">
                     <h4 class="text-center">Velas/Candles</h4>
                     <p><i class="fa fa-usd" aria-hidden="true"></i>80</p>
                 </div>
-                <div class="col-3 card text-center bg-transparent text-dark m-3 border border-warning">
+                <div class="col-3 card text-center bg-transparent m-3 border border-warning">
                     <img src="./img/ferrero.png" class="img-fluid my-4 mx-5" alt="Ferreros Rocher" style="height: 150px; width:180px">
                     <h4 class="text-center">Ferreros Rocher</h4>
                     <p><i class="fa fa-usd" aria-hidden="true"></i>120</p>
                 </div>
-                <div class="col-3 card text-center bg-transparent text-dark m-3 border border-warning">
+                <div class="col-3 card text-center bg-transparent m-3 border border-warning">
                     <img src="./img/durazno.png" class="img-fluid my-4 mx-5" alt="Duraznos" style="height: 150px; width:180px">
                     <h4 class="text-center">Duraznos/Peaches</h4>
                     <p><i class="fa fa-usd" aria-hidden="true"></i>60</p>
                 </div>
                 <div class="col-1"></div>
-                <div class="col-3 card text-center bg-transparent text-dark m-3 border border-warning">
+                <div class="col-3 card text-center bg-transparent m-3 border border-warning">
                     <img src="./img/oreos.png" class="img-fluid my-4 mx-5" alt="Oreos" style="height: 150px; width:180px">
                     <h4 class="text-center">Oreos</h4>
                     <p><i class="fa fa-usd" aria-hidden="true"></i>40</p>
                 </div>
-                <div class="col-3 card text-center bg-transparent text-dark m-3 border border-warning">
+                <div class="col-3 card text-center bg-transparent m-3 border border-warning">
                     <img src="./img/lechera.webp" class="img-fluid my-4 mx-5" alt="Lechera" style="height: 150px; width:150px">
                     <h4 class="text-center">Lechera</h4>
                     <p><i class="fa fa-usd" aria-hidden="true"></i>60</p>
                 </div>
-                <div class="col-3 card text-center bg-transparent text-dark m-3 border border-warning">
+                <div class="col-3 card text-center bg-transparent m-3 border border-warning">
                     <img src="./img/fondant.webp" class="img-fluid my-4 mx-5" alt="Fondant" style="height: 150px; width:150px">
                     <h4 class="text-center">Fondant</h4>
                     <p><i class="fa fa-usd" aria-hidden="true"></i>200</p>
@@ -111,34 +138,34 @@
     <section>
         <form action="">
             <!--Creacion de pasteles-->
-        <h3 class="text-center mt-3">Crea el pastel a tu gusto</h3> <br>
+        <h3 class="text-center mt-3"  id="creacion">Crea el pastel a tu gusto</h3> <br>
         <p class="text-center">¡¡Combina !!</p> <br>
         <p class="text-center">Selecciona los tipos de sabores para tu pastel</p>
         <div class="container">
             <div class="row">
                 <div class="col-1"></div>
-                <div class="col-3 card text-center bg-transparent m-3 text-dark border border-info">
+                <div class="col-3 card text-center bg-transparent m-3 border border-info">
                     <img src="./img/fresa.png" class="img-fluid p-3" alt="Sabor Fresa">
                     <h5 class="text-center"><input type="checkbox" class="valores" value="Fresa"> Fresa</h5>
                 </div>
-                <div class="col-3 card text-center bg-transparent m-3 text-dark border border-info">
+                <div class="col-3 card text-center bg-transparent m-3 border border-info">
                     <img src="./img/vainilla.png" class="img-fluid p-3 mt-4 m2-5" alt="Sabor Vainilla" >
                     <h5 class="text-center"><input type="checkbox" class="valores" value="Vainilla"> Vainilla</h5>
                 </div>
-                <div class="col-3 card text-center bg-transparent m-3 text-dark border border-info">
+                <div class="col-3 card text-center bg-transparent m-3 border border-info">
                     <img src="./img/chocolate.png" class="img-fluid p-3" alt="Sabor Chocolate">
                     <h5 class="text-center"><input type="checkbox" class="valores" value="Chocolate"> Chocolate</h5>
                 </div>
                 <div class="col-1"></div>
-                <div class="col-3 card text-center bg-transparent m-3 text-dark border border-info">
+                <div class="col-3 card text-center bg-transparent m-3 border border-info">
                     <img src="./img/mango.png" class="img-fluid p-3" alt="Sabor Mango">
                     <h5 class="text-center"><input type="checkbox" class="valores" value="Mango"> Mango</h5>
                 </div>
-                <div class="col-3 card text-center bg-transparent m-3 text-dark border border-info">
+                <div class="col-3 card text-center bg-transparent m-3 border border-info">
                     <img src="./img/leches.png" class="img-fluid p-3" alt="Sabor 3 Leches">
                     <h5 class="text-center"><input type="checkbox" class="valores" value="3 Leches"> 3 Leches</h5>
                 </div>
-                <div class="col-3 card text-center bg-transparent m-3 text-dark border border-info">
+                <div class="col-3 card text-center bg-transparent m-3 border border-info">
                     <img src="./img/cafe.png" class="img-fluid p-3" alt="Sabor Cafe">
                     <h5 class="text-center"><input type="checkbox" class="valores" value="Cafe"> Cafe</h5>
                 </div>
@@ -150,28 +177,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-1"></div>
-                <div class="col-3 card text-center bg-transparent m-3 text-dark border border-info">
+                <div class="col-3 card text-center bg-transparent m-3 border border-info">
                     <img src="./img/velas.jpg" class="img-fluid ml-5" alt="Velas"  style="height: 200px; width: 150px;">
                     <h5 class="text-center"><input type="checkbox" class="valoresA" value="Velas"> Velas</h5>
                 </div>
-                <div class="col-3 card text-center bg-transparent m-3 text-dark border border-info">
+                <div class="col-3 card text-center bg-transparent m-3 border border-info">
                     <img src="./img/ferrero.png" class="img-fluid my-4 mx-5" alt="Ferreros Rocher" style="height: 155px; width:180px" >
                     <h5 class="text-center"><input type="checkbox" class="valoresA" value="Ferreros Rocher"> Ferreros Rocher</h5>
                 </div>
-                <div class="col-3 card text-center bg-transparent m-3 text-dark border border-info">
+                <div class="col-3 card text-center bg-transparent m-3 border border-info">
                     <img src="./img/durazno.png" class="img-fluid my-4 mx-5" alt="Duraznos" style="height: 155px; width:180px">
                     <h5 class="text-center"><input type="checkbox" class="valoresA" value="Duraznos"> Duraznos</h5>
                 </div>
                 <div class="col-1"></div>
-                <div class="col-3 card text-center bg-transparent m-3 text-dark border border-info">
+                <div class="col-3 card text-center bg-transparent m-3 border border-info">
                     <img src="./img/oreos.png" class="img-fluid my-4 mx-5" alt="Oreos" style="height: 140px; width:180px">
                     <h5 class="text-center"><input type="checkbox" class="valoresA" value="Oreos"> Oreos</h5>
                 </div>
-                <div class="col-3 card text-center bg-transparent m-3 text-dark border border-info">
+                <div class="col-3 card text-center bg-transparent m-3 border border-info">
                     <img src="./img/lechera.webp" class="img-fluid my-4 mx-5" alt="Lechera" style="height: 150px; width:150px">
                     <h5 class="text-center"><input type="checkbox" class="valoresA" value="Lechera"> Lechera</h5>
                 </div>
-                <div class="col-3 card text-center bg-transparent m-3 text-dark border border-info">
+                <div class="col-3 card text-center bg-transparent m-3 border border-info">
                     <img src="./img/fondant.webp" class="img-fluid my-4 mx-5" alt="Fondant" style="height: 150px; width:150px">
                     <h5 class="text-center"><input type="checkbox" class="valoresA" value="Fondant"> Fondant</h5>
                 </div>
@@ -217,10 +244,58 @@
         </form>
     </section>
     <!--Secciones-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-dark mx-2">
+                    <tr>
+                        <td><h2 class="text-white text-center" id="horarios">Horarios</h2></td>
+                    </tr>
+                </table>
+                <table class="table table-dark mx-2">
+                    <tr>
+                        <td>Dias</td>
+                        <td>Lunes</td>
+                        <td>Martes</td>
+                        <td>Miercoles</td>
+                        <td>Jueves</td>
+                        <td>Viernes</td>
+                        <td>Sabado</td>
+                        <td>Domingo</td>
+                    </tr>
+                    <tr>
+                        <td>Hora</td>
+                        <td>8:00-16:00</td>
+                        <td>8:00-16:00</td>
+                        <td>8:00-16:00</td>
+                        <td>8:00-16:00</td>
+                        <td>8:00-16:00</td>
+                        <td>8:00-17:00</td>
+                        <td>8:00-13:00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6 text-center bg-info">
+                <h5 class="text-white"><i class="fa fa-map-marker text-white" aria-hidden="true"></i> Ubicacion: Calle maderos #15</h5>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-6 text-center bg-info">
+                <h5 class="text-white"><i class="fa fa-phone text-white" aria-hidden="true"></i> Telefono: 4653672048</h5>
+            </div>   
+        </div>
+    </div>
     <footer>  
         <div class="container-fluid mt-5">
-            <div class="row bg-dark pt-3">     
-                <div class="col-4 text-center ">
+            <div class="row bg-dark pt-3">
+                  
+                <div class="col-4 text-center">
                     <i class="fa fa-envelope text-white" aria-hidden="true"></i>
                     <h5 class="text-white">Contactanos</h5>
                 </div>

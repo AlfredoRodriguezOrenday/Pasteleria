@@ -9,16 +9,24 @@ let checks = document.querySelectorAll(".valores");
 let checksA = document.querySelectorAll(".valoresA");
 let guardar = document.querySelector("#guardar");
 let enviar = document.querySelector("#enviar");
+let cuerpo = document.querySelector("body");
 
 //Obteniendo inputs
 let nombre = document.querySelector("#nombre");
 let telefono = document.querySelector("#telefono");
 let correo = document.querySelector("#correoelectronico");
+let icono = document.querySelector("#icono");
+let i = document.querySelector("#DN");
+const tsc = document.querySelector(".tsc");
+let nav = document.querySelector("#nav");
+
+
 eventListeners();
 
 function eventListeners(){
     guardar.addEventListener('click', agregarInfo);
     enviar.addEventListener('click', enviarPedidos);
+    icono.addEventListener('click', cambiarColor);
 }
 
 function agregarInfo(e){
@@ -96,4 +104,30 @@ function enviarPedidos(e){
             alert('Debe de escoger un tipo de pastel para su pedido');
         }
     }
+}
+function cambiarColor(e){
+    e.preventDefault();
+    if(icono.value=="dia"){
+        cuerpo.classList.remove("text-white");
+        cuerpo.classList.remove("darks");
+        nav.classList.remove("navbar-dark", "bg-dark");
+        cuerpo.classList.add("bg-white");
+        cuerpo.classList.add("text-dark");
+        icono.value = "noche";
+        i.classList.remove("fa-sun-o", "text-white");
+        i.classList.add("fa-moon-o");
+        nav.classList.add("navbar-light", "bg-light");
+    }else if(icono.value == "noche"){
+        cuerpo.classList.remove("text-dark");
+        cuerpo.classList.remove("bg-white");
+        nav.classList.remove("navbar-light", "bg-light");
+        cuerpo.classList.add("darks");
+        cuerpo.classList.add("text-white");
+        icono.value = "dia";
+        i.classList.remove("fa-moon-o");
+        i.classList.add("fa-sun-o", "text-white");
+        tsc.classList.add("text-dark");
+        nav.classList.add("navbar-dark", "bg-dark");
+    }
+
 }
